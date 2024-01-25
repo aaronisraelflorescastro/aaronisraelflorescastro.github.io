@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú de Hamburguesas</title>
+    <style>
+        /* Agrega tus estilos CSS aquí según sea necesario */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header, footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            background-color: #555;
+            padding: 1em;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5em;
+        }
+
+        section {
+            display: flex;
+            margin: 20px;
+        }
+
+        aside {
+            background-color: #eee;
+            padding: 1em;
+            width: 200px;
+        }
+
+        main {
+            flex: 1;
+            padding: 1em;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Nombre del Sitio</h1>
+    </header>
+
+    <nav>
+        <div>
+            <!-- Menú de hamburguesa para pantallas pequeñas -->
+            <button id="menuBtn">&#9776; Menú</button>
+
+            <!-- Barra de navegación principal -->
+            <a href="#">Inicio</a>
+            <a href="#">Productos</a>
+            <a href="#">Contacto</a>
+        </div>
+
+        <!-- Menú desplegable -->
+        <div id="dropdownMenu">
+            <a href="#">Opción 1</a>
+            <a href="#">Opción 2</a>
+            <a href="#">Opción 3</a>
+        </div>
+    </nav>
+
+    <section>
+        <aside>
+            <!-- Barra lateral -->
+            <h2>Barra lateral</h2>
+            <ul>
+                <li><a href="#">Enlace 1</a></li>
+                <li><a href="#">Enlace 2</a></li>
+                <li><a href="#">Enlace 3</a></li>
+            </ul>
+        </aside>
+
+        <main>
+            <!-- Contenido principal -->
+            <h2>Contenido Principal</h2>
+            <p>Texto de ejemplo...</p>
+        </main>
+    </section>
+
+    <footer>
+        <p>Pie de página &copy; 2024</p>
+    </footer>
+
+    <script>
+        // Cliente: Toggle del menú desplegable
+        document.getElementById('menuBtn').addEventListener('click', function() {
+            document.getElementById('dropdownMenu').classList.toggle('show');
+        });
+
+        // Servidor: Validaciones del lado del servidor (solo como ejemplo)
+        function validarDatos() {
+            var nombre = document.getElementById('nombre').value;
+            var correo = document.getElementById('correo').value;
+
+            if (nombre === '' || correo === '') {
+                alert('Por favor, completa todos los campos.');
+                return false;
+            }
+
+            // Agregar más validaciones según sea necesario
+
+            return true;
+        }
+    </script>
+
+</body>
+</html>
