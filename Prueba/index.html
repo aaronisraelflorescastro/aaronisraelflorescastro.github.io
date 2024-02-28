@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	
+</head>
+<body>
+	<meta charset="UTF-8">
+	<style>
+		input
+		{
+		width:200px;
+		height:30px;
+		font-size:18px;
+		}
+		div
+		{
+		text-align: center;
+		}
+		h1
+		{
+		font-size:40px;
+		}
+	</style>
+
+	<div>
+	<h1> Login </h1>
+	
+	<form method="POST" action="login_registrar.php">
+	<input type="text" name="txtusuario" placeholder="Ingresar usuario" required>
+	<input type="password" name="txtpassword" placeholder="Ingresar contraseña" required>
+	<input type="submit" value="Registrar" name="btnregistrar">
+	</form>
+	
+	<h1> Registrar </h1>
+	
+	<form method="POST" action="login_registrar.php">
+	<input type="text" name="txtusuario" placeholder="Usuario a registrar" required>
+	<input type="password" name="txtpassword" placeholder="Contraseña a registrar" required>
+	<input type="submit" value="Registrar" name="btnregistrar">
+	</form>
+	</div>
+</body>
+</html>
